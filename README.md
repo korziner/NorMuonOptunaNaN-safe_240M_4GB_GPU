@@ -16,7 +16,7 @@ Skipping import of cpp extensions due to incompatible torch version. Please upgr
 ✅ Loaded 43960 examples
 📦 Loading model oopere/gemma-3-270m-14L-distilled...
 Loading weights: 100%|██████| 158/158 [00:00<00:00, 3982.36it/s]
-The module name  (originally ) is not a valid Python identifier. Please rename the original module to avoid import issues.
+ 
 ✅ Model loaded. Parameters: 234.66M
 
 ⏩ Skipping benchmarks
