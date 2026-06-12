@@ -39,33 +39,32 @@ Tokenizing train dataset: 100%|████ | 43960/43960 [00:15<00:00, 2869.54 
 🚀 Starting training...
   0%|                                                                                                                                 | 10/131880 [00:17<63:05:45,  1.72s/it]step 10/1000000 │ loss 3.6551 │ ema 3.6551 │ lr 1.79e-09 │ gnorm 202.35 │       95 tok/s │ VRAM 0.26 GB free │ acc 0.455 │ entropy 1.280
 ```
-Accuracy  0.645:
-```
-rg -A9999 "3.655.*entropy 1.280" pretrain.log|sort -Vk25|tail|column -t
-
-step  10850/1000000  │  loss  1.9946  │  ema  1.9946  │  lr  3.88e-06  │  gnorm  30.30  │  232  tok/s  │  VRAM  0.30  GB  free  │  acc  0.605  │  entropy  2.135
-step  6980/1000000   │  loss  1.9726  │  ema  1.9726  │  lr  2.49e-06  │  gnorm  37.79  │  232  tok/s  │  VRAM  2.33  GB  free  │  acc  0.607  │  entropy  1.965
-step  2850/1000000   │  loss  1.9644  │  ema  1.9644  │  lr  1.02e-06  │  gnorm  56.74  │  236  tok/s  │  VRAM  0.88  GB  free  │  acc  0.607  │  entropy  2.158
-step  7360/1000000   │  loss  1.8794  │  ema  1.8794  │  lr  2.63e-06  │  gnorm  49.79  │  233  tok/s  │  VRAM  2.33  GB  free  │  acc  0.610  │  entropy  1.998
-step  2700/1000000   │  loss  1.8828  │  ema  1.8828  │  lr  9.63e-07  │  gnorm  62.55  │  236  tok/s  │  VRAM  2.33  GB  free  │  acc  0.611  │  entropy  1.993
-step  8190/1000000   │  loss  1.9476  │  ema  1.9476  │  lr  2.93e-06  │  gnorm  31.73  │  232  tok/s  │  VRAM  0.88  GB  free  │  acc  0.620  │  entropy  2.163
-step  7770/1000000   │  loss  1.7820  │  ema  1.7820  │  lr  2.78e-06  │  gnorm  42.57  │  233  tok/s  │  VRAM  0.89  GB  free  │  acc  0.622  │  entropy  1.942
-step  7740/1000000   │  loss  1.8532  │  ema  1.8532  │  lr  2.76e-06  │  gnorm  48.15  │  233  tok/s  │  VRAM  2.33  GB  free  │  acc  0.625  │  entropy  1.821
-step  10140/1000000  │  loss  1.7915  │  ema  1.7915  │  lr  3.62e-06  │  gnorm  44.31  │  231  tok/s  │  VRAM  2.33  GB  free  │  acc  0.631  │  entropy  1.946
-step  6280/1000000   │  loss  1.5950  │  ema  1.5950  │  lr  2.24e-06  │  gnorm  48.28  │  233  tok/s  │  VRAM  2.33  GB  free  │  acc  0.645  │  entropy  1.831
+Accuracy  0.746:
+```tail -500 pretrain.log|sort -Vk25|tail|column -t
+step  13970/1000000  │  loss  1.2720  │  ema  1.2720  │  lr  4.86e-06  │  gnorm  35.03  │  249  tok/s  │  VRAM  0.13  GB  free  │  acc  0.720  │  entropy  1.377
+step  13350/1000000  │  loss  1.2952  │  ema  1.2952  │  lr  4.77e-06  │  gnorm  36.76  │  249  tok/s  │  VRAM  0.27  GB  free  │  acc  0.720  │  entropy  1.383
+step  13100/1000000  │  loss  1.2860  │  ema  1.2860  │  lr  4.68e-06  │  gnorm  39.88  │  249  tok/s  │  VRAM  2.35  GB  free  │  acc  0.722  │  entropy  1.286
+step  12200/1000000  │  loss  1.2332  │  ema  1.2332  │  lr  4.36e-06  │  gnorm  50.46  │  249  tok/s  │  VRAM  2.35  GB  free  │  acc  0.725  │  entropy  1.367
+step  11770/1000000  │  loss  1.2523  │  ema  1.2523  │  lr  4.21e-06  │  gnorm  39.00  │  249  tok/s  │  VRAM  0.06  GB  free  │  acc  0.726  │  entropy  1.301
+step  13040/1000000  │  loss  1.2527  │  ema  1.2527  │  lr  4.66e-06  │  gnorm  55.85  │  249  tok/s  │  VRAM  0.27  GB  free  │  acc  0.726  │  entropy  1.355
+step  13900/1000000  │  loss  1.2662  │  ema  1.2662  │  lr  4.86e-06  │  gnorm  32.73  │  249  tok/s  │  VRAM  2.35  GB  free  │  acc  0.730  │  entropy  1.373
+step  11820/1000000  │  loss  1.3078  │  ema  1.3078  │  lr  4.22e-06  │  gnorm  47.37  │  249  tok/s  │  VRAM  0.27  GB  free  │  acc  0.733  │  entropy  1.312
+step  14020/1000000  │  loss  1.1704  │  ema  1.1704  │  lr  4.86e-06  │  gnorm  45.48  │  249  tok/s  │  VRAM  0.29  GB  free  │  acc  0.737  │  entropy  1.199
+step  13840/1000000  │  loss  1.1426  │  ema  1.1426  │  lr  4.86e-06  │  gnorm  46.68  │  249  tok/s  │  VRAM  0.25  GB  free  │  acc  0.746  │  entropy  1.231
 ```
 
-loss  1.5950:
+loss  1.1426:
 ```
-rg -A9999 "3.655.*entropy 1.280" pretrain.log|awk '{print $8,$0}'|sort -rVk1|column -t|tail
-1.9644  step  2850/1000000   │  loss  1.9644  │  ema  1.9644  │  lr  1.02e-06  │  gnorm  56.74   │  236  tok/s  │  VRAM  0.88  GB  free  │  acc  0.607  │  entropy  2.158
-1.9608  step  9920/1000000   │  loss  1.9608  │  ema  1.9608  │  lr  3.54e-06  │  gnorm  55.45   │  231  tok/s  │  VRAM  2.33  GB  free  │  acc  0.563  │  entropy  1.968
-1.9476  step  8190/1000000   │  loss  1.9476  │  ema  1.9476  │  lr  2.93e-06  │  gnorm  31.73   │  232  tok/s  │  VRAM  0.88  GB  free  │  acc  0.620  │  entropy  2.163
-1.8905  step  9060/1000000   │  loss  1.8905  │  ema  1.8905  │  lr  3.24e-06  │  gnorm  30.03   │  232  tok/s  │  VRAM  2.33  GB  free  │  acc  0.603  │  entropy  1.952
-1.8828  step  2700/1000000   │  loss  1.8828  │  ema  1.8828  │  lr  9.63e-07  │  gnorm  62.55   │  236  tok/s  │  VRAM  2.33  GB  free  │  acc  0.611  │  entropy  1.993
-1.8794  step  7360/1000000   │  loss  1.8794  │  ema  1.8794  │  lr  2.63e-06  │  gnorm  49.79   │  233  tok/s  │  VRAM  2.33  GB  free  │  acc  0.610  │  entropy  1.998
-1.8532  step  7740/1000000   │  loss  1.8532  │  ema  1.8532  │  lr  2.76e-06  │  gnorm  48.15   │  233  tok/s  │  VRAM  2.33  GB  free  │  acc  0.625  │  entropy  1.821
-1.7915  step  10140/1000000  │  loss  1.7915  │  ema  1.7915  │  lr  3.62e-06  │  gnorm  44.31   │  231  tok/s  │  VRAM  2.33  GB  free  │  acc  0.631  │  entropy  1.946
-1.7820  step  7770/1000000   │  loss  1.7820  │  ema  1.7820  │  lr  2.78e-06  │  gnorm  42.57   │  233  tok/s  │  VRAM  0.89  GB  free  │  acc  0.622  │  entropy  1.942
-1.5950  step  6280/1000000   │  loss  1.5950  │  ema  1.5950  │  lr  2.24e-06  │  gnorm  48.28   │  233  tok/s  │  VRAM  2.33  GB  free  │  acc  0.645  │  entropy  1.831
+tail -500 pretrain.log|awk '{print $8,$0}'|sort -rVk1|column -t|tail
+1.2660  step  11640/1000000  │  loss  1.2660  │  ema  1.2660  │  lr  4.16e-06  │  gnorm  41.27  │  249  tok/s  │  VRAM  0.25  GB  free  │  acc  0.699  │  entropy  1.422
+1.2596  step  11870/1000000  │  loss  1.2596  │  ema  1.2596  │  lr  4.24e-06  │  gnorm  31.61  │  249  tok/s  │  VRAM  0.19  GB  free  │  acc  0.704  │  entropy  1.398
+1.2527  step  13040/1000000  │  loss  1.2527  │  ema  1.2527  │  lr  4.66e-06  │  gnorm  55.85  │  249  tok/s  │  VRAM  0.27  GB  free  │  acc  0.726  │  entropy  1.355
+1.2523  step  11770/1000000  │  loss  1.2523  │  ema  1.2523  │  lr  4.21e-06  │  gnorm  39.00  │  249  tok/s  │  VRAM  0.06  GB  free  │  acc  0.726  │  entropy  1.301
+1.2475  step  13380/1000000  │  loss  1.2475  │  ema  1.2475  │  lr  4.78e-06  │  gnorm  37.63  │  249  tok/s  │  VRAM  0.27  GB  free  │  acc  0.711  │  entropy  1.312
+1.2332  step  12200/1000000  │  loss  1.2332  │  ema  1.2332  │  lr  4.36e-06  │  gnorm  50.46  │  249  tok/s  │  VRAM  2.35  GB  free  │  acc  0.725  │  entropy  1.367
+1.2251  step  14050/1000000  │  loss  1.2251  │  ema  1.2251  │  lr  4.86e-06  │  gnorm  35.84  │  249  tok/s  │  VRAM  0.29  GB  free  │  acc  0.720  │  entropy  1.333
+1.2155  step  11670/1000000  │  loss  1.2155  │  ema  1.2155  │  lr  4.17e-06  │  gnorm  41.48  │  249  tok/s  │  VRAM  0.25  GB  free  │  acc  0.708  │  entropy  1.325
+1.1704  step  14020/1000000  │  loss  1.1704  │  ema  1.1704  │  lr  4.86e-06  │  gnorm  45.48  │  249  tok/s  │  VRAM  0.29  GB  free  │  acc  0.737  │  entropy  1.199
+1.1426  step  13840/1000000  │  loss  1.1426  │  ema  1.1426  │  lr  4.86e-06  │  gnorm  46.68  │  249  tok/s  │  VRAM  0.25  GB  free  │  acc  0.746  │  entropy  1.231
 ```
+<img width="1761" height="1031" alt="image" src="https://github.com/user-attachments/assets/9c12289d-cb0e-4c7d-b2e1-732ed1b85dab" />
